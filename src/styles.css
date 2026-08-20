@@ -62,8 +62,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --radius: 0.875rem;
+  --background: oklch(0.976 0.003 247.9);
+  --surface: oklch(1 0 0);
+  --page-top: oklch(1 0 0);
+  --tile-blue: oklch(0.93 0.045 250);
+  --tile-blue-foreground: oklch(0.55 0.19 258);
+  --tile-green: oklch(0.94 0.055 155);
+  --tile-green-foreground: oklch(0.52 0.15 152);
+  --tile-orange: oklch(0.94 0.05 70);
+  --tile-orange-foreground: oklch(0.55 0.15 55);
+  --tile-purple: oklch(0.94 0.04 300);
+  --tile-purple-foreground: oklch(0.5 0.19 300);
+  --tile-indigo: oklch(0.93 0.045 275);
+  --tile-indigo-foreground: oklch(0.5 0.19 275);
+  --status-active: oklch(0.55 0.15 155);
+  --status-active-bg: oklch(0.95 0.05 155);
+  --year-bg: oklch(0.94 0.04 250);
+  --year-foreground: oklch(0.5 0.18 258);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.04), 0 8px 24px oklch(0 0 0 / 0.05);
+
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
