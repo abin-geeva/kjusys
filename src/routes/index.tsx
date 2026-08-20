@@ -3,7 +3,7 @@ import { ChevronRight, ClipboardList, Landmark } from "lucide-react";
 
 import avatarAsset from "@/assets/student.jpeg.asset.json";
 
-const avatar = "/student.jpg";
+const avatar = "/student.jpeg";
 
 
 export const Route = createFileRoute("/")({
