@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, ClipboardList, Landmark } from "lucide-react";
 
-import avatarAsset from "@/assets/student.jpeg.asset.json";
+import avatarAsset from "@/assets/student.jpeg";
 
 const avatar = "/student.jpeg";
 
