@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, ClipboardList, Landmark } from "lucide-react";
 
 import avatarAsset from "@/assets/student.jpeg.asset.json";
@@ -38,8 +38,20 @@ const details = [
 ];
 
 const quickLinks = [
-  { label: "LMS", icon: ClipboardList, bg: "bg-tile-blue", fg: "text-tile-blue-foreground" },
-  { label: "Library", icon: Landmark, bg: "bg-tile-purple", fg: "text-tile-purple-foreground" },
+  {
+    label: "LMS",
+    to: "/lms" as const,
+    icon: ClipboardList,
+    bg: "bg-tile-blue",
+    fg: "text-tile-blue-foreground",
+  },
+  {
+    label: "Library",
+    to: "/library" as const,
+    icon: Landmark,
+    bg: "bg-tile-purple",
+    fg: "text-tile-purple-foreground",
+  },
 ];
 
 
@@ -97,9 +109,10 @@ function Index() {
         <section className="rounded-3xl bg-surface p-5 shadow-card">
           <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Quick Links</h2>
           <div className="mt-5 grid grid-cols-2 gap-3">
-            {quickLinks.map(({ label, icon: Icon, bg, fg }) => (
-              <button
+            {quickLinks.map(({ label, to, icon: Icon, bg, fg }) => (
+              <Link
                 key={label}
+                to={to}
                 className="flex items-center gap-3 rounded-2xl border border-border px-3 py-3 text-left transition-shadow hover:shadow-card"
               >
                 <span className={`flex size-11 shrink-0 items-center justify-center rounded-xl ${bg}`}>
@@ -109,7 +122,7 @@ function Index() {
                   {label}
                 </span>
                 <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
-              </button>
+              </Link>
             ))}
           </div>
         </section>
