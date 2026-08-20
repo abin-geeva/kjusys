@@ -1,14 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Menu,
-  ChevronRight,
-  ClipboardList,
-  BadgeCheck,
-  BookPlus,
-  Ticket,
-  Landmark,
-  CalendarCheck,
-} from "lucide-react";
+import { Menu, ChevronRight, ClipboardList, Landmark } from "lucide-react";
+
 import avatar from "@/assets/student-avatar.jpg";
 
 export const Route = createFileRoute("/")({
