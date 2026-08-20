@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Menu, ChevronRight, ClipboardList, Landmark } from "lucide-react";
+import { ChevronRight, ClipboardList, Landmark } from "lucide-react";
 
-import avatar from "@/assets/student-avatar.jpg";
+import avatarAsset from "@/assets/student.jpeg.asset.json";
+
+const avatar = avatarAsset.url;
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,10 +46,7 @@ const quickLinks = [
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-surface px-5 py-4">
-        <button aria-label="Open menu" className="rounded-md p-1 text-foreground">
-          <Menu className="size-8" strokeWidth={2.5} />
-        </button>
+      <header className="sticky top-0 z-10 flex items-center justify-end border-b border-border bg-surface px-5 py-4">
         <img
           src={avatar}
           alt="Abin Geevarghese"
@@ -55,6 +55,7 @@ function Index() {
           className="size-14 rounded-full border border-border object-cover"
         />
       </header>
+
 
       <main className="mx-auto w-full max-w-2xl space-y-6 px-4 py-6">
         <section className="rounded-3xl bg-surface p-5 shadow-card">
