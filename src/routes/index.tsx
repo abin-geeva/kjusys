@@ -1,14 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Menu,
-  ChevronRight,
-  ClipboardList,
-  BadgeCheck,
-  BookPlus,
-  Ticket,
-  Landmark,
-  CalendarCheck,
-} from "lucide-react";
+import { Menu, ChevronRight, ClipboardList, Landmark } from "lucide-react";
+
 import avatar from "@/assets/student-avatar.jpg";
 
 export const Route = createFileRoute("/")({
@@ -44,12 +36,9 @@ const details = [
 
 const quickLinks = [
   { label: "LMS", icon: ClipboardList, bg: "bg-tile-blue", fg: "text-tile-blue-foreground" },
-  { label: "Exam Results", icon: BadgeCheck, bg: "bg-tile-green", fg: "text-tile-green-foreground" },
-  { label: "Subject Enrolment", icon: BookPlus, bg: "bg-tile-orange", fg: "text-tile-orange-foreground" },
-  { label: "Hall Tickets", icon: Ticket, bg: "bg-tile-green", fg: "text-tile-green-foreground" },
   { label: "Library", icon: Landmark, bg: "bg-tile-purple", fg: "text-tile-purple-foreground" },
-  { label: "Attendance", icon: CalendarCheck, bg: "bg-tile-indigo", fg: "text-tile-indigo-foreground" },
 ];
+
 
 function Index() {
   return (
