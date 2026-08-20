@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, Search } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export function EmptyState({ title }: { title: string }) {
   return (
@@ -18,9 +18,7 @@ export function EmptyState({ title }: { title: string }) {
       <main className="flex min-h-[70vh] flex-col items-center justify-center px-6 text-center">
         <div className="relative flex items-center justify-center">
           <span className="absolute h-24 w-64 rounded-full bg-tile-blue/50" />
-          <span className="relative flex size-32 items-center justify-center rounded-full border-[6px] border-tile-blue-foreground bg-surface">
-            <Search className="size-0" />
-          </span>
+          <span className="relative size-32 rounded-full border-[6px] border-tile-blue-foreground bg-tile-blue/40" />
           <span className="absolute -bottom-2 -right-6 h-14 w-5 rotate-[-45deg] rounded-full border-[6px] border-tile-blue-foreground bg-surface" />
         </div>
 
