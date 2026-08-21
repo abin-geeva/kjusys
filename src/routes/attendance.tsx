@@ -65,17 +65,8 @@ function Attendance() {
         </div>
 
         <div className="mt-3 space-y-7 rounded-3xl bg-surface p-5 shadow-card">
-          <div className="grid grid-cols-3 divide-x divide-border text-center text-base">
-            <div>
-              Total: <span className="font-medium text-foreground">80</span>
-            </div>
-            <div>
-              Present: <span className="font-bold text-status-active">80</span>
-            </div>
-            <div>
-              Absent: <span className="font-bold text-destructive">0</span>
-            </div>
-          </div>
+
+
 
           {bars.map((bar) => (
             <div key={bar.label}>
