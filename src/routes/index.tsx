@@ -102,22 +102,24 @@ function LoginPage({ onLogin }: { onLogin: () => void }) {
   }
 
   return (
-    <main className="min-h-screen bg-white px-6 py-10 text-black sm:px-10">
+    <main className="min-h-screen bg-white px-4 py-6 text-black sm:px-10 sm:py-10">
       <div className="mx-auto w-full max-w-3xl">
-        {/* University header */}
-        <div className="flex justify-center overflow-hidden">
-          <UniversityLogo />
-        </div>
 
-        {/* Login form */}
-        <form onSubmit={handleSubmit} className="mx-auto mt-24 max-w-2xl">
-          <h1 className="font-serif text-4xl sm:text-5xl">
+        {/* Logo */}
+        <UniversityLogo />
+
+        {/* Login */}
+        <form
+          onSubmit={handleSubmit}
+          className="mx-auto mt-12 w-full max-w-2xl sm:mt-24"
+        >
+          <h1 className="font-serif text-3xl leading-tight sm:text-5xl">
             Login to Kjusys
           </h1>
 
           {/* Email */}
-          <div className="mt-16">
-            <label className="block text-[23px] font-medium text-slate-500">
+          <div className="mt-10 sm:mt-16">
+            <label className="block text-lg font-medium text-slate-500 sm:text-[23px]">
               E-mail
             </label>
 
@@ -130,17 +132,25 @@ function LoginPage({ onLogin }: { onLogin: () => void }) {
                 setError(false);
               }}
               placeholder="Enter your Email"
-              className="mt-5 h-24 w-full rounded-3xl border-2 border-slate-200 px-7 text-2xl text-slate-700 outline-none transition focus:border-slate-400"
+              className="
+                mt-3 h-16 w-full
+                rounded-2xl border-2 border-slate-200
+                px-5 text-lg text-slate-700
+                outline-none transition
+                focus:border-slate-400
+                sm:mt-5 sm:h-24 sm:rounded-3xl
+                sm:px-7 sm:text-2xl
+              "
             />
           </div>
 
           {/* Password */}
-          <div className="mt-16">
-            <label className="block text-[23px] font-medium text-slate-500">
+          <div className="mt-9 sm:mt-16">
+            <label className="block text-lg font-medium text-slate-500 sm:text-[23px]">
               Password
             </label>
 
-            <div className="relative mt-5">
+            <div className="relative mt-3 sm:mt-5">
               <input
                 type={showPassword ? "text" : "password"}
                 autoComplete="current-password"
@@ -150,29 +160,46 @@ function LoginPage({ onLogin }: { onLogin: () => void }) {
                   setError(false);
                 }}
                 placeholder="Enter your Password"
-                className="h-24 w-full rounded-3xl border-2 border-slate-200 px-7 pr-20 text-2xl text-slate-700 outline-none transition focus:border-slate-400"
+                className="
+                  h-16 w-full
+                  rounded-2xl border-2 border-slate-200
+                  px-5 pr-14 text-lg text-slate-700
+                  outline-none transition
+                  focus:border-slate-400
+                  sm:h-24 sm:rounded-3xl
+                  sm:px-7 sm:pr-20 sm:text-2xl
+                "
               />
 
               <button
                 type="button"
-                aria-label={showPassword ? "Hide password" : "Show password"}
-                onClick={() => setShowPassword((value) => !value)}
-                className="absolute right-5 top-1/2 -translate-y-1/2 p-3 text-slate-500"
+                aria-label={
+                  showPassword ? "Hide password" : "Show password"
+                }
+                onClick={() =>
+                  setShowPassword((value) => !value)
+                }
+                className="
+                  absolute right-3 top-1/2
+                  -translate-y-1/2
+                  p-2 text-slate-500
+                  sm:right-5 sm:p-3
+                "
               >
                 {showPassword ? (
-                  <EyeOff className="size-8" />
+                  <EyeOff className="size-6 sm:size-8" />
                 ) : (
-                  <Eye className="size-8" />
+                  <Eye className="size-6 sm:size-8" />
                 )}
               </button>
             </div>
           </div>
 
           {/* Forgot password */}
-          <div className="mt-5 flex justify-end">
+          <div className="mt-3 flex justify-end sm:mt-5">
             <button
               type="button"
-              className="text-xl font-semibold text-black hover:underline"
+              className="text-base font-semibold text-black hover:underline sm:text-xl"
               onClick={() => setError(true)}
             >
               Forgot Password?
@@ -181,37 +208,65 @@ function LoginPage({ onLogin }: { onLogin: () => void }) {
 
           {/* Error */}
           {error && (
-            <div className="mt-6 rounded-2xl bg-red-50 px-5 py-4 text-center text-lg font-semibold text-red-600">
+            <div
+              className="
+                mt-4 rounded-2xl bg-red-50
+                px-4 py-3 text-center
+                text-sm font-semibold text-red-600
+                sm:mt-6 sm:px-5 sm:py-4 sm:text-lg
+              "
+            >
               Incorrect credentials. Please check your e-mail and password.
             </div>
           )}
 
-          {/* Login */}
+          {/* Login button */}
           <button
             type="submit"
-            className="mt-8 flex h-24 w-full items-center justify-center rounded-3xl bg-black text-2xl font-bold text-white transition hover:bg-slate-900 active:scale-[0.99]"
+            className="
+              mt-6 flex h-16 w-full
+              items-center justify-center
+              rounded-2xl bg-black
+              text-lg font-bold text-white
+              transition hover:bg-slate-900
+              active:scale-[0.99]
+              sm:mt-8 sm:h-24
+              sm:rounded-3xl sm:text-2xl
+            "
           >
-            <LockKeyhole className="mr-3 size-6" />
+            <LockKeyhole className="mr-2 size-5 sm:mr-3 sm:size-6" />
             Log in
           </button>
         </form>
 
         {/* Footer */}
-        <footer className="mx-auto mt-44 max-w-2xl text-center text-slate-500">
-          <div className="flex items-center gap-6">
+        <footer
+          className="
+            mx-auto max-w-2xl
+            mt-20 text-center text-slate-500
+            sm:mt-44
+          "
+        >
+          <div className="flex items-center gap-3 sm:gap-6">
             <div className="h-px flex-1 bg-slate-400" />
-            <span className="text-xl">Powered by</span>
+            <span className="text-base sm:text-xl">
+              Powered by
+            </span>
             <div className="h-px flex-1 bg-slate-400" />
           </div>
 
-          <p className="mt-8 text-2xl font-medium text-black">
-            <span className="mr-3 inline-block text-xl">◆</span>
+          <p className="mt-6 text-lg font-medium text-black sm:mt-8 sm:text-2xl">
+            <span className="mr-2 inline-block text-base sm:mr-3 sm:text-xl">
+              ◆
+            </span>
             Kristu Jayanti Software Development Centre
           </p>
 
-          <p className="mt-7 text-xl">An Initiative of</p>
+          <p className="mt-5 text-base sm:mt-7 sm:text-xl">
+            An Initiative of
+          </p>
 
-          <p className="mt-5 text-xl">
+          <p className="mt-4 text-base sm:mt-5 sm:text-xl">
             Kristu Jayanti (Deemed to be University)
           </p>
         </footer>
