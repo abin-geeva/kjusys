@@ -75,7 +75,7 @@ function UniversityLogo() {
   return (
     <div className="flex justify-center">
       <img
-        src="/kju-logo.jpeg"
+        src="/kju-logo.png"
         alt="Kristu Jayanti University"
         className="h-auto w-full max-w-[760px] object-contain"
       />
