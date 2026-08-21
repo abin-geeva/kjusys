@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ChevronRight, ClipboardList, Landmark } from "lucide-react";
+import { CalendarCheck, ChevronRight, ClipboardList, Landmark, Wallet } from "lucide-react";
+
 
 import avatarAsset from "@/assets/student.jpeg";
 
@@ -52,7 +53,22 @@ const quickLinks = [
     bg: "bg-tile-purple",
     fg: "text-tile-purple-foreground",
   },
+  {
+    label: "Attendance",
+    to: "/attendance" as const,
+    icon: CalendarCheck,
+    bg: "bg-tile-indigo",
+    fg: "text-tile-indigo-foreground",
+  },
+  {
+    label: "Fees",
+    to: "/fees" as const,
+    icon: Wallet,
+    bg: "bg-tile-orange",
+    fg: "text-tile-orange-foreground",
+  },
 ];
+
 
 
 function Index() {
