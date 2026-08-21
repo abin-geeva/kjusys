@@ -73,32 +73,12 @@ const quickLinks = [
 
 function UniversityLogo() {
   return (
-    <div className="flex w-full items-center justify-center gap-4 text-[#005596]">
-      <div className="flex size-24 shrink-0 items-center justify-center rounded-full border-[3px] border-[#005596] sm:size-28">
-        <div className="flex size-16 items-center justify-center rounded-full border border-[#005596] text-center text-[8px] font-bold leading-tight sm:size-20 sm:text-[10px]">
-          KRISTU JAYANTI
-          <br />
-          UNIVERSITY
-        </div>
-      </div>
-
-      <div className="text-left">
-        <div className="font-serif text-3xl leading-none tracking-tight sm:text-5xl">
-          KRISTU JAYANTI
-        </div>
-
-        <div className="mt-2 text-[10px] font-medium tracking-[0.14em] sm:text-[15px]">
-          (DEEMED TO BE UNIVERSITY)
-        </div>
-
-        <div className="mt-1 text-[9px] tracking-wide sm:text-[13px]">
-          Under Section 3 of UGC Act 1956
-        </div>
-
-        <div className="mt-2 text-[9px] font-bold tracking-[0.13em] sm:text-[14px]">
-          A CMI INSTITUTION | BENGALURU | INDIA
-        </div>
-      </div>
+    <div className="flex justify-center">
+      <img
+        src="/kju-logo.jpeg"
+        alt="Kristu Jayanti University"
+        className="h-auto w-full max-w-[760px] object-contain"
+      />
     </div>
   );
 }
